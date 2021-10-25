@@ -10,60 +10,70 @@
   <body>
     <div class="container">
       <h1>Jeopardy</h1>
-      <div class="grid">
-        <div class="category cat-1"><p>Cat-1</p></div>
-        <div class="gameboard cat1-1"><p>100</p></div>
-        <div class="gameboard cat1-2"><p>200</p></div>
-        <div class="gameboard cat1-3"><p>300</p></div>
-        <div class="gameboard cat1-4"><p>400</p></div>
-        <div class="gameboard cat1-5"><p>500</p></div>
+      <div id="timers">
+      <h2 id="round-timer">Round Timer: 00:00</h2>
+      <h2 id="player-heading"></h2>
+      <h2 id="question-timer">Question Timer: 00:00</h2>
+    </div>
+    
+      <div id="grid">
+        <p class="category cat-1">Cat-1</p>
+        <p class="gameboard cat1-1">100</p>
+        <p class="gameboard cat1-2">200</p>
+        <p class="gameboard cat1-3">300</p>
+        <p class="gameboard cat1-4">400</p>
+        <p class="gameboard cat1-5">500</p>
 
-        <div class="category cat-2"><p>Cat-2</p></div>
-        <div class="gameboard cat2-1"><p>100</p></div>
-        <div class="gameboard cat2-2"><p>200</p></div>
-        <div class="gameboard cat2-3"><p>300</p></div>
-        <div class="gameboard cat2-4"><p>400</p></div>
-        <div class="gameboard cat2-5"><p>500</p></div>
+        <p class="category cat-2">Cat-2</p>
+        <p class="gameboard cat2-1">100</p>
+        <p class="gameboard cat2-2">200</p>
+        <p class="gameboard cat2-3">300</p>
+        <p class="gameboard cat2-4">400</p>
+        <p class="gameboard cat2-5">500</p>
 
-        <div class="category cat-3"><p>Cat-3</p></div>
-        <div class="gameboard cat3-1"><p>100</p></div>
-        <div class="gameboard cat3-2"><p>200</p></div>
-        <div class="gameboard cat3-3"><p>300</p></div>
-        <div class="gameboard cat3-4"><p>400</p></div>
-        <div class="gameboard cat3-5"><p>500</p></div>
+        <p class="category cat-3">Cat-3</p>
+        <p class="gameboard cat3-1">100</p>
+        <p class="gameboard cat3-2">200 3</p>
+        <p class="gameboard cat3-3">300</p>
+        <p class="gameboard cat3-4">400</p>
+        <p class="gameboard cat3-5">500</p>
 
-        <div class="category cat-4"><p>Cat-4</p></div>
-        <div class="gameboard cat4-1"><p>100</p></div>
-        <div class="gameboard cat4-2"><p>200</p></div>
-        <div class="gameboard cat4-3"><p>300</p></div>
-        <div class="gameboard cat4-4"><p>400</p></div>
-        <div class="gameboard cat4-5"><p>500</p></div>
+        <p class="category cat-4">Cat-4</p>
+        <p class="gameboard cat4-1">100</p>
+        <p class="gameboard cat4-2">200 4</p>
+        <p class="gameboard cat4-3">300</p>
+        <p class="gameboard cat4-4">400</p>
+        <p class="gameboard cat4-5">500</p>
 
-        <div class="category cat-5"><p>Cat-5</p></div>
-        <div class="gameboard cat5-1"><p>100</p></div>
-        <div class="gameboard cat5-2"><p>200</p></div>
-        <div class="gameboard cat5-3"><p>300</p></div>
-        <div class="gameboard cat5-4"><p>400</p></div>
-        <div class="gameboard cat5-5"><p>500</p></div>
+        <p class="category cat-5">Cat-5</p>
+        <p class="gameboard cat5-1">100</p>
+        <p class="gameboard cat5-2">200</p>
+        <p class="gameboard cat5-3">300</p>
+        <p class="gameboard cat5-4">400</p>
+        <p class="gameboard cat5-5">500</p>
 
-        <div class="category cat-6"><p>Cat-6</p></div>
-        <div class="gameboard cat6-1"><p>100</p></div>
-        <div class="gameboard cat6-2"><p>200</p></div>
-        <div class="gameboard cat6-3"><p>300</p></div>
-        <div class="gameboard cat6-4"><p>400</p></div>
-        <div class="gameboard cat6-5"><p>500</p></div>
+        <p class="category cat-6">Cat-6</p>
+        <p class="gameboard cat6-1">100</p>
+        <p class="gameboard cat6-2">200</p>
+        <p class="gameboard cat6-3">300</p>
+        <p class="gameboard cat6-4">400</p>
+        <p class="gameboard cat6-5">500</p>
       </div>
+  
+      <!-- Start of the input area for the Players -->
       <div class="input-area">
-        <input
-          type="text"
-          id="player-guess-input"
-          size="30"
-          placeholder="Your guess here..."
-        />
-        <div class="input-buttons">
-          <div class="button"><h2>Guess</h2></div>
-          <div class="button"><h2>Pass</h2></div>
-        </div>
+        <form>
+          <input
+            type="text"
+            id="player-guess-input"
+            size="30"
+            placeholder="Your guess here..."
+          />
+          <div class="input-buttons">
+            <input type="submit" value="Guess" class="button" id="guess-input"/>
+            <input type="submit" value="Pass" class="button" id="pass-input"/>
+          </div>
+        </form>
       </div>
       <div class="score">
         <div id="player1"><h2>Player 1: 0</h2></div>
@@ -71,5 +81,54 @@
       </div>
       <div id="to-round2"><a href="./round-2.html">Double Jeopardy</a></div>
     </div>
+    <script src="scripts/round-1.js"></script>
   </body>
 </html>
+
+
+
+
+<!-- 
+<div class="grid">
+  <div class="category cat-1"><p>Cat-1</p></div>
+  <div class="gameboard cat1-1"><p>100</p></div>
+  <div class="gameboard cat1-2"><p>200</p></div>
+  <div class="gameboard cat1-3"><p>300</p></div>
+  <div class="gameboard cat1-4"><p>400</p></div>
+  <div class="gameboard cat1-5"><p>500</p></div>
+
+  <div class="category cat-2"><p>Cat-2</p></div>
+  <div class="gameboard cat2-1"><p>100</p></div>
+  <div class="gameboard cat2-2"><p>200</p></div>
+  <div class="gameboard cat2-3"><p>300</p></div>
+  <div class="gameboard cat2-4"><p>400</p></div>
+  <div class="gameboard cat2-5"><p>500</p></div>
+
+  <div class="category cat-3"><p>Cat-3</p></div>
+  <div class="gameboard cat3-1"><p>100</p></div>
+  <div class="gameboard cat3-2"><p>200</p></div>
+  <div class="gameboard cat3-3"><p>300</p></div>
+  <div class="gameboard cat3-4"><p>400</p></div>
+  <div class="gameboard cat3-5"><p>500</p></div>
+
+  <div class="category cat-4"><p>Cat-4</p></div>
+  <div class="gameboard cat4-1"><p>100</p></div>
+  <div class="gameboard cat4-2"><p>200</p></div>
+  <div class="gameboard cat4-3"><p>300</p></div>
+  <div class="gameboard cat4-4"><p>400</p></div>
+  <div class="gameboard cat4-5"><p>500</p></div>
+
+  <div class="category cat-5"><p>Cat-5</p></div>
+  <div class="gameboard cat5-1"><p>100</p></div>
+  <div class="gameboard cat5-2"><p>200</p></div>
+  <div class="gameboard cat5-3"><p>300</p></div>
+  <div class="gameboard cat5-4"><p>400</p></div>
+  <div class="gameboard cat5-5"><p>500</p></div>
+
+  <div class="category cat-6"><p>Cat-6</p></div>
+  <div class="gameboard cat6-1"><p>100</p></div>
+  <div class="gameboard cat6-2"><p>200</p></div>
+  <div class="gameboard cat6-3"><p>300</p></div>
+  <div class="gameboard cat6-4"><p>400</p></div>
+  <div class="gameboard cat6-5"><p>500</p></div>
+</div> -->
