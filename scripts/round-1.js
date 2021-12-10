@@ -43,7 +43,7 @@ function roundTimer(playingBool) {
     count -= 1;
     if (count < 0) {
       clearInterval(intervalId);
-      return playingBool = false;
+      return (playingBool = false);
       // alert("Round 1 has ended. Click to continue to Double Jeopardy");
       //   document.location = "/round-2.html#"; // moves to Double Jeopardy if timed out.
     }
@@ -57,6 +57,7 @@ function questionTimer() {
   let target = document.getElementById("question-timer");
   buttonDisabler(false); // enables the Pass button
 
+  // this is the counter function that handles the round timer of 5 minutes
   function counter() {
     let currentSecond = count;
     let minutes = Math.floor(currentSecond / 60);
@@ -97,7 +98,6 @@ function buttonDisabler(inputBool) {
   }
 }
 
-
 roundTimer(stillPlaying); // starts the Round timer of 5 minutes after the Welcome message is clicked
 
 // Below is the clicking on the gameboard grid area
@@ -113,18 +113,17 @@ passButton.addEventListener("click", (evt) => {
   // old timer doesn't stop for some reason
   questionTimer();
 
-
-  if (currentPlayer === (playerArray.length -1)) {
+  if (currentPlayer === playerArray.length - 1) {
     playerHeading.textContent = `Current Player is ${
       playerArray[numPlayers - numPlayers]
     }!`;
     currentPlayer = numPlayers - numPlayers;
   } else {
-    playerHeading.textContent = `Current Player is ${playerArray[currentPlayer + 1]}!`;
+    playerHeading.textContent = `Current Player is ${
+      playerArray[currentPlayer + 1]
+    }!`;
     currentPlayer = currentPlayer + 1;
   }
   alert(`Passed to next player : ${playerArray[currentPlayer]}`);
   console.log(currentPlayer);
 });
-
-

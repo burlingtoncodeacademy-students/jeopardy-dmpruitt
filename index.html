@@ -12,22 +12,21 @@
     <title>Jeopardy</title>
   </head>
   <body>
-     <!-- animated landing page with help from this website, https://animate.style/ , css for animations linked in head -->
+    <!-- animated landing page with help from this website, https://animate.style/ , css for animations linked in head -->
     <div class="animate__animated animate__fadeInLeft" id="welcome">
       <h1>Welcome to Jeopardy!</h1>
       <img src="images/welcome.jpg" />
 
-       <!-- This form is to pass on the player names to Round 1, currently hard coded in index.js -->
-      <form> 
-          <button type="submit" class="button">Start Game</button>
+      <!-- This form is to pass on the player names to Round 1, currently hard coded in index.js -->
+      <form>
+        <button type="submit" class="button">Start Game</button>
       </form>
-      
     </div>
-    <!-- audio will auto play the music upon page load  -->
+    <!-- audio will auto play the music upon page load, with optional .ogg  -->
     <audio id="musicplayer" autoplay>
       <source src="/audio/Jeopardy_2008-2015.mp3" type="audio/mpeg" />
       <source src="/audio/Jeopardy_2008-2015.ogg" type="audio/ogg" />
     </audio>
-    <script src="scripts/index.js"></script> 
+    <script src="scripts/index.js"></script>
   </body>
 </html>

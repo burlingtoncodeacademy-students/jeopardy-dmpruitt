@@ -1,3 +1,8 @@
+
+
+
+
+
 # Jeopardy Board
 
 Jeopardy! The great American quiz show has been a staple of network television since the 60s.  In this project we will be creating our own Jeopardy board which we will build the functionality for in later weeks. For now we're going to focus on site design and navigation.
